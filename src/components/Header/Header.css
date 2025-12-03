@@ -12,7 +12,7 @@
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   z-index: 50;           
-  padding: 0 2rem; /* padding général pour l'ensemble de la navbar */
+  padding: 0; 
   box-sizing: border-box;
 }
 
@@ -22,8 +22,8 @@
   justify-content: flex-start; 
   width: 100%;
   max-width: 1200px; 
-  margin: 0 auto;
-  gap: 2rem; /* espace entre logo et nav */
+  margin: 0; 
+  gap: 2rem; 
 }
 
 .brand-hdr {
@@ -34,7 +34,7 @@
   font-weight: 800;
   font-size: 1.1rem;
   gap: 1rem;
-  padding-left: 8px; /* petit padding à gauche pour le logo */
+  padding-left: 4px; /* petit padding léger pour le logo */
 }
 
 .brand-logo {
@@ -53,6 +53,7 @@
   display: flex;
   align-items: center;
   gap: 2rem; /* espace entre les liens */
+  margin-left: 1rem; /* léger décalage depuis le logo */
 }
 
 .nav-hdr a {
@@ -86,33 +87,4 @@
 .nav-hdr a.active::after {
   background: #6e5252;
   transform: scaleX(1);
-}
-
-.actions-hdr {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.icon-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 9999px;
-  text-decoration: none;
-  transition: transform 0.15s ease, background-color 0.15s ease;
-}
-
-.icon-btn:hover,
-.icon-btn:focus-visible {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-.icon-img {
-  width: 40px;
-  height: 40px;
-  display: block;
 }
