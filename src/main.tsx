@@ -1,17 +1,13 @@
-import React, { StrictMode } from "react";
-import { createRoot } from "react-dom/client"; // import correct pour React 18
-import { RouterProvider, createBrowserRouter } from "react-router-dom"; // react-router-dom pour tout
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client"; 
+import { RouterProvider, createBrowserRouter } from "react-router-dom"; 
+
 import './index.css';
 import App from './App';
-import HomePage from './HomePage.tsx'; // Assure-toi d'importer ton composant
+import HomePage from "./pages /HomePage/HomePage";
 
-// Sélection de la div racine
-const rootElement = document.getElementById("root");
-if (!rootElement) {
-  throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
-}
 
-// Configuration du routeur
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -24,7 +20,13 @@ const router = createBrowserRouter([
   },
 ]);
 
-// Création de la racine et rendu
+
+
+const rootElement = document.getElementById("root");
+if (!rootElement) {
+  throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
+}
+
 const root = createRoot(rootElement);
 root.render(
   <StrictMode>
