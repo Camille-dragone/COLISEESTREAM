@@ -1,4 +1,4 @@
-import HeroImage from "../../../assets/colisee2.png";
+import HeroImage from "../../../assets/colisee4.png";
 import "./Hero.css";
 
 function Hero() {
