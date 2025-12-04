@@ -15,14 +15,14 @@ const EventPage = () => {
 				<h2>EVENEMENTS</h2>
 			</div>
 
-			<h3>Evenements à venir</h3>
+			<h3>Évènements à venir</h3>
 			<div className="flexEvent">
 				<EventComponent imgSrc={Event1} eventId="race-fulgur-aurora" />
 				<EventComponent imgSrc={Event4} eventId="fight-marcus-titus" />
 				<EventComponent imgSrc={Event2} eventId="race-mare-ventus" />
 			</div>
 
-			<h3>Evenements passés</h3>
+			<h3>Évènements passés</h3>
 			<div className="flexEvent">
 				<EventComponent imgSrc={Event5} eventId="fight-gnaeus-lucius" />
 				<EventComponent imgSrc={Event3} eventId="race-tempestas-glacies" />

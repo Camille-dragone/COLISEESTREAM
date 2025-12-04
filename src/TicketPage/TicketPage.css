@@ -1,0 +1,219 @@
+.ticket-page {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 24px;
+
+  color: black;
+  font-family: "Cinzel", serif;
+}
+
+.ticket-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ticket-header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+}
+
+.ticket-header h2 {
+  margin-top: 8px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: black;
+}
+
+.ticket-subtitle {
+  opacity: 0.8;
+  margin-top: 4px;
+  color: black;
+}
+
+.ticket-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.ticket-plan {
+  padding: 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.ticket-plan-image {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.ticket-legend h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.ticket-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ticket-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.legend-podium {
+  background: #b22222;
+}
+
+.legend-ima {
+  background: #1e90ff;
+}
+
+.legend-media {
+  background: #2e8b57;
+}
+
+.legend-fosse {
+  background: #ffd700;
+}
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ticket-section {
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.zone-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.zone-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 12px;
+  background: rgba(212, 212, 212, 0.25);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+  color: black;
+}
+
+.zone-button .zone-price {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.zone-podium {
+  border-left: 4px solid #b22222;
+}
+
+.zone-ima {
+  border-left: 4px solid #1e90ff;
+}
+
+.zone-media {
+  border-left: 4px solid #2e8b57;
+}
+
+.zone-button.active {
+  border-color: #ffd700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+.ticket-quantity {
+  margin-top: 12px;
+}
+
+.ticket-quantity label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket-quantity input {
+  width: 80px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.ticket-total {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  border-radius: 12px;
+  color: black;
+}
+
+.ticket-total h3 {
+  margin-bottom: 8px;
+}
+
+.ticket-total p {
+  margin: 4px 0;
+}
+
+.ticket-total-amount {
+  margin-top: 8px;
+  font-size: 1.15rem;
+}
+
+.ticket-pay-button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ffd700;
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ticket-pay-button:hover {
+  filter: brightness(1.05);
+}
+
+.legend-fosse {
+  background: #ffcc33;
+}
+
+.zone-fosse {
+  border-left: 4px solid #ffcc33;
+}
+
+@media (max-width: 900px) {
+  .ticket-layout {
+    grid-template-columns: 1fr;
+  }
+}
