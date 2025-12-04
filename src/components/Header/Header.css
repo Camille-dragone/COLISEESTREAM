@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap');
+
+.site-header-hdr {
+  position:absolute;     
+  top: 0;
+  left: 0;
+  width: 100%;           
+  height: 100px;          
+  background-image: url('../../assets/marbre2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  z-index: 50;           
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Cinzel', serif; 
+}
+
+.site-header-hdr::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px; 
+  background-color: #791515; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.container-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0; 
+  gap: 2rem; 
+  padding-left: 20px; 
+}
+
+.brand-hdr {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #791515; 
+  font-weight: 800;
+  font-size: 1.2rem; 
+  gap: 1rem;
+  padding-left: 0; 
+}
+
+.brand-logo {
+  height: 80px; 
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.brand-hdr:hover .brand-logo,
+.brand-hdr:focus-visible .brand-logo {
+  transform: scale(1.06);
+}
+
+.nav-hdr {
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+  margin-left: 1rem; 
+}
+
+.nav-hdr a {
+  color: #791515; 
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-hdr a:hover,
+.nav-hdr a:focus-visible {
+  transform: scale(1.06);
+}
+
+.nav-hdr a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 100%;
+  background: transparent;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-hdr a:hover::after,
+.nav-hdr a.active::after {
+  background: #6e5252; 
+  transform: scaleX(1);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #EFEBE8; 
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  color: #791515;
+}
+
+.dropdown-content a:hover {
+  background-color: #EFEBE8; 
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
