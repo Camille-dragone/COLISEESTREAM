@@ -1,0 +1,56 @@
+.hero-wrapper {
+  width: 100vw; 
+  border-bottom: 1px solid rgba(59, 51, 51, 0.25);
+  overflow: hidden; 
+}
+
+.hero-section {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem; 
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hero-img {
+  width: 50%; 
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+
+  animation: kenburns-zoom 10s ease-out infinite;
+  transform-origin: center;
+}
+
+@keyframes kenburns-zoom {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.8;
+  }
+  25% {
+    transform: scale(1.08) translate(-5px, -5px);
+  }
+  50% {
+    transform: scale(1.12) translate(5px, -3px);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.15) translate(-4px, 6px);
+  }
+  100% {
+    transform: scale(1.18) translate(0px, 0px);
+    opacity: 0.9;
+  }
+}
+
+.hero-content {
+  text-align: left;
+  color: rgb(64, 42, 42);
+  max-width: 450px;
+}
+
