@@ -2,7 +2,8 @@
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background-color: #EFEBE8; 
+  background-color: #efebe8;
+  width: 100%;
 }
 
 body {
@@ -10,9 +11,9 @@ body {
   display: flex;
   flex-direction: column;
   color: white;
-  background-color: #EFEBE8; 
-  margin: 0; 
-  font-family: sans-serif; 
+  background-color: #efebe8;
+  margin: 0;
+  font-family: sans-serif;
 }
 
 main {

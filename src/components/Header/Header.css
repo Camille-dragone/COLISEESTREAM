@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap');
 
 .site-header-hdr {
-  position: fixed;       
+  position:absolute;     
   top: 0;
   left: 0;
   width: 100%;           
@@ -101,4 +101,34 @@
 .nav-hdr a.active::after {
   background: #6e5252; 
   transform: scaleX(1);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #EFEBE8; 
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  color: #791515;
+}
+
+.dropdown-content a:hover {
+  background-color: #EFEBE8; 
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
 }

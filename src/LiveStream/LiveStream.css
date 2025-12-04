@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap');
+
+.live-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding-top: 150px;  
+  font-family: 'Cinzel', serif; 
+  text-align: center;
+  color: #791515;
+}
+
+.live-title {
+  margin-bottom: 25px;
+  font-size: 2.5rem; 
+}
+
+.video-wrapper {
+  position: relative;
+  width: 1200px;  
+  height: 720px;  
+  margin: 0 auto; 
+}
+
+.video-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1200px; 
+  height: 720px; 
+  z-index: 1;
+}
+
+.video-content {
+  position: absolute;
+  top: 70px;      
+  left: 70px;     
+  width: 1060px;   
+  height: 580px;   
+  object-fit: cover;
+  z-index: 2;
+  border-radius: 0;
+}
+
+.live-info {
+  margin-top: 25px;
+  max-width: 1200px; 
+}
+
+.live-info p {
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
