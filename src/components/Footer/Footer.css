@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+}
+
+.footer-center {
+  width: 100%;
+  height: 50px; 
+  background-image: url('../../assets/marbre2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  font-size: 1rem; 
+  color:black; 
+  box-sizing: border-box;
+  position: relative;
+  margin-top: auto; 
+
+}
+
+.footer-center::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #791515;
+  position: absolute;
+  top: 0; 
+  left: 0;
+}
