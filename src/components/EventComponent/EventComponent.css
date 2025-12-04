@@ -1,5 +1,5 @@
 .eventImgCont {
-  width: 350px;
+  max-width: 550px;
   background: transparent;
   cursor: pointer;
   transition: 0.5s ease;
