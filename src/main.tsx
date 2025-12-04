@@ -7,6 +7,7 @@ import App from "./App";
 import HomePage from "./HomePage/HomePage";
 import EventPage from "./EventPage/EventPage";
 import EventDetailPage from "./EventDetailPage/EventDetailPage.tsx";
+import LiveStream from "./LiveStream/LiveStream.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 				path: "/events/:eventId",
 				element: <EventDetailPage />,
 			},
+      {
+        path: "/stream/live",
+        element: <LiveStream/>,
+      },
 		],
 	},
 ]);
