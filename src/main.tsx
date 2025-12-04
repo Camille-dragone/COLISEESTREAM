@@ -8,6 +8,7 @@ import HomePage from "./HomePage/HomePage";
 import EventPage from "./EventPage/EventPage";
 import EventDetailPage from "./EventDetailPage/EventDetailPage.tsx";
 import LiveStream from "./LiveStream/LiveStream.tsx";
+import Replay from "./Replay/Replay.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/stream/live",
         element: <LiveStream/>,
+      },
+      {
+        path: "/stream/replay",
+        element: <Replay/>,
       },
 		],
 	},
