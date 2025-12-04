@@ -2,11 +2,6 @@
   max-width: 1000px;
   margin: 9rem auto 3rem;
   padding: 2.5rem 2rem;
-
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
-
-  border: 1px solid rgba(225, 190, 70, 0.3);
   font-family: "Cinzel", serif;
 }
 
@@ -87,11 +82,6 @@
 }
 
 .event-section.results {
-  background: linear-gradient(
-    to right,
-    rgba(120, 120, 120, 0.2),
-    transparent 50%
-  );
   padding: 1.7rem 1.2rem 1.8rem;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -160,4 +150,64 @@
   .event-section.results {
     padding: 1.3rem 1rem 1.4rem;
   }
+}
+
+.team-grid,
+.gladiator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.team-card,
+.gladiator-card {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.team-card-header h4,
+.gladiator-card-header h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.1rem;
+  color: #7e0a0a;
+}
+
+.team-city,
+.gladiator-nickname {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  color: #000000;
+}
+
+.gladiator-nickname {
+  color: black;
+}
+
+.team-slogan,
+.gladiator-motto {
+  margin-top: 0.6rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #353535;
+}
+
+.team-horses {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.team-members,
+.gladiator-infos {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+}
+
+.team-members li,
+.gladiator-infos li {
+  margin-bottom: 0.25rem;
 }

@@ -1,6 +1,11 @@
-import { useParams } from "react-router";
-import { coliseumEvents } from "../data/ColiseumEvents";
-import { gladiators, chariotTeams } from "../data/ColiseumData";
+import { useParams } from "react-router-dom";
+import { coliseumEvents, type ColiseumEvent } from "../data/ColiseumEvents";
+import {
+	gladiators as allGladiators,
+	chariotTeams as allChariotTeams,
+	type Gladiator,
+	type ChariotTeam,
+} from "../data/ColiseumData";
 import "./EventDetailPage.css";
 
 const EventDetailPage: React.FC = () => {
@@ -12,15 +17,15 @@ const EventDetailPage: React.FC = () => {
 		return <main className="event-detail-page">Évènement introuvable.</main>;
 	}
 
-	const eventGladiators =
+	const eventGladiators: Gladiator[] =
 		event.gladiatorIds
-			?.map((id) => gladiators.find((g) => g.id === id))
-			.filter(Boolean) ?? [];
+			?.map((id) => allGladiators.find((g) => g.id === id))
+			.filter((g): g is Gladiator => Boolean(g)) ?? [];
 
-	const eventTeams =
+	const eventTeams: ChariotTeam[] =
 		event.chariotTeamIds
-			?.map((id) => chariotTeams.find((t) => t.id === id))
-			.filter(Boolean) ?? [];
+			?.map((id) => allChariotTeams.find((t) => t.id === id))
+			.filter((t): t is ChariotTeam => Boolean(t)) ?? [];
 
 	const isUpcoming = event.status === "UPCOMING";
 	const isPast = event.status === "PAST";
@@ -44,26 +49,63 @@ const EventDetailPage: React.FC = () => {
 			{eventTeams.length > 0 && (
 				<section className="event-section">
 					<h3>Équipes de char</h3>
-					<ul>
+					<div className="team-grid">
 						{eventTeams.map((team) => (
-							<li key={team!.id}>
-								<strong>{team!.name}</strong> – {team!.city}
-							</li>
+							<article className="team-card" key={team.id}>
+								<header className="team-card-header">
+									<h4>{team.name}</h4>
+									<p className="team-city">
+										{team.city} · Couleur : {team.factionColor}
+									</p>
+								</header>
+								<p className="team-slogan">« {team.slogan} »</p>
+								<p className="team-horses">
+									Chevaux principaux : <strong>{team.mainHorses}</strong>
+								</p>
+								{team.members && team.members.length > 0 && (
+									<ul className="team-members">
+										{team.members.map((m) => (
+											<li key={m.id}>
+												<strong>{m.role}</strong> – {m.name} (
+												{m.yearsExperience} ans d&apos;exp.)
+											</li>
+										))}
+									</ul>
+								)}
+							</article>
 						))}
-					</ul>
+					</div>
 				</section>
 			)}
 
 			{eventGladiators.length > 0 && (
 				<section className="event-section">
 					<h3>Gladiateurs</h3>
-					<ul>
+					<div className="gladiator-grid">
 						{eventGladiators.map((g) => (
-							<li key={g!.id}>
-								<strong>{g!.name}</strong> — {g!.nickname}
-							</li>
+							<article className="gladiator-card" key={g.id}>
+								<header className="gladiator-card-header">
+									<h4>{g.name}</h4>
+									<p className="gladiator-nickname">« {g.nickname} »</p>
+								</header>
+								<ul className="gladiator-infos">
+									<li>
+										Âge : <strong>{g.age} ans</strong>
+									</li>
+									<li>
+										Ville d&apos;origine : <strong>{g.originCity}</strong>
+									</li>
+									<li>
+										Style : <strong>{g.style}</strong>
+									</li>
+									<li>
+										Taille : <strong>{g.heightCm} cm</strong>
+									</li>
+								</ul>
+								<p className="gladiator-motto">« {g.motto} »</p>
+							</article>
 						))}
-					</ul>
+					</div>
 				</section>
 			)}
 
@@ -75,7 +117,13 @@ const EventDetailPage: React.FC = () => {
 				/>
 			)}
 
-			{isPast && <PastEventDetail eventId={event.id} />}
+			{isPast && (
+				<PastEventDetail
+					event={event}
+					gladiators={eventGladiators}
+					teams={eventTeams}
+				/>
+			)}
 		</main>
 	);
 };
@@ -109,14 +157,72 @@ const UpcomingEventDetail: React.FC<UpcomingProps> = ({
 };
 
 interface PastProps {
-	eventId: string;
+	event: ColiseumEvent;
+	gladiators: Gladiator[];
+	teams: ChariotTeam[];
 }
 
-const PastEventDetail: React.FC<PastProps> = () => {
+const PastEventDetail: React.FC<PastProps> = ({ event, gladiators, teams }) => {
+	const result = event.result;
+
+	if (!result) {
+		return (
+			<section className="event-section results">
+				<h3>Résultats</h3>
+				<p>Résultats détaillés à venir.</p>
+			</section>
+		);
+	}
+
+	let winnerName = "";
+	let loserName = "";
+
+	if (result.winnerGladiatorId) {
+		const winner = gladiators.find((g) => g.id === result.winnerGladiatorId);
+		const loser = result.loserGladiatorId
+			? gladiators.find((g) => g.id === result.loserGladiatorId)
+			: undefined;
+		winnerName = winner ? winner.name : "";
+		loserName = loser ? loser.name : "";
+	} else if (result.winnerTeamId) {
+		const winner = teams.find((t) => t.id === result.winnerTeamId);
+		const loser = result.loserTeamId
+			? teams.find((t) => t.id === result.loserTeamId)
+			: undefined;
+		winnerName = winner ? winner.name : "";
+		loserName = loser ? loser.name : "";
+	}
+
 	return (
 		<section className="event-section results">
 			<h3>Résultats</h3>
-			<p>Résultats détaillés à renseigner pour cet évènement.</p>
+
+			{winnerName && (
+				<p>
+					<strong>Vainqueur :</strong> {winnerName}
+					{loserName && (
+						<>
+							{" "}
+							<br />
+							<strong>Face à :</strong> {loserName}
+						</>
+					)}
+				</p>
+			)}
+
+			{result.score && (
+				<p>
+					<strong>Score :</strong> {result.score}
+				</p>
+			)}
+
+			{typeof result.durationMinutes === "number" && (
+				<p>
+					<strong>Durée :</strong> {result.durationMinutes} minutes
+				</p>
+			)}
+
+			<p className="result-recap">{result.recap}</p>
 		</section>
 	);
 };
