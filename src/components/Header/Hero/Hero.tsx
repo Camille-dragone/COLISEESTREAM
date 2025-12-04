@@ -9,7 +9,6 @@ function Hero() {
       <section className="hero-section">
         <div className="hero-content">
           <h1>Colisseum</h1>
-          {/* <p>Ma description</p> */}
         </div>
 
         <div className="hero-images">
