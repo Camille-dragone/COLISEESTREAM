@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Header.css"; 
+import logo from "../../assets/logo1.png"
 
 function Header() {
   return (
@@ -10,7 +11,7 @@ function Header() {
           className="brand-hdr"
           aria-label="Aller à l’accueil"
         >
-       {/*   <img src={logo} alt="Accueil" className="brand-logo" />*/}
+        <img src={logo} alt="Accueil" className="brand-logo" />
         </NavLink>
 
         <nav className="nav-hdr" aria-label="Évènements">
