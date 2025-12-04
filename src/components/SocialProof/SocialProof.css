@@ -1,0 +1,191 @@
+.social-proof {
+	padding: 80px 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.social-proof::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image:
+		radial-gradient(
+			circle at 20% 50%,
+			rgba(121, 21, 21, 0.05) 0%,
+			transparent 50%
+		),
+		radial-gradient(
+			circle at 80% 80%,
+			rgba(121, 21, 21, 0.03) 0%,
+			transparent 50%
+		);
+	pointer-events: none;
+}
+
+.social-proof-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+.social-proof-header {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.social-proof-header p {
+	font-family: cinzel, serif;
+	font-size: 42px;
+	font-weight: 700;
+	color: #791515;
+	margin: 0 0 12px 0;
+	letter-spacing: -0.5px;
+}
+
+.testimonials-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 28px;
+}
+
+.testimonial-card {
+	background: white;
+	padding: 32px;
+	border-radius: 12px;
+	border-left: 4px solid #791515;
+	box-shadow: 0 2px 12px rgba(121, 21, 21, 0.08);
+	transition: all 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.testimonial-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 8px 24px rgba(121, 21, 21, 0.12);
+}
+
+.testimonial-icon {
+	height: 60px;
+	width: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.testimonial-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.testimonial-text {
+	font-size: 15px;
+	line-height: 1.7;
+	color: #333;
+	margin: 0;
+	font-style: italic;
+	flex-grow: 1;
+}
+
+.testimonial-hashtag {
+	font-size: 13px;
+	color: #555;
+	font-weight: 500;
+	margin-top: -8px;
+}
+
+.testimonial-date {
+	font-size: 12px;
+	color: #999;
+	font-weight: 400;
+	margin: 0;
+}
+
+.testimonial-author {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	padding-top: 12px;
+	border-top: 1px solid #e8e8e8;
+	align-items: center;
+}
+
+.author-name {
+	font-weight: 600;
+	color: #791515;
+	font-size: 14px;
+	align-content: center;
+}
+
+.author-role {
+	font-size: 12px;
+	color: #999;
+	font-weight: 400;
+}
+
+.author-clients {
+	font-size: 12px;
+	color: #999;
+	font-weight: 400;
+}
+
+.author-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 30px;
+}
+
+.see-more-button {
+	margin-left: auto;
+	display: block;
+	padding: 0.7rem 1.7rem;
+	margin-top: 40px;
+	margin-right: 20px;
+	border-radius: 999px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 0.98rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	background: radial-gradient(
+		circle at 30% 0,
+		#ffeaa7 0,
+		#e1be46 40%,
+		#7b5a12 100%
+	);
+	color: #21170a;
+	box-shadow:
+		0 6px 16px rgba(0, 0, 0, 0.8),
+		0 0 10px rgba(225, 190, 70, 0.9);
+	transition:
+		transform 0.12s ease-out,
+		box-shadow 0.12s ease-out,
+		filter 0.12s ease-out;
+}
+
+.see-more-button:hover {
+	transform: translateY(-1px) scale(1.02);
+	box-shadow:
+		0 10px 26px rgba(0, 0, 0, 0.9),
+		0 0 14px rgba(255, 230, 140, 1);
+	filter: brightness(1.05);
+}
+
+.see-more-button:active {
+	transform: translateY(1px) scale(0.99);
+	box-shadow:
+		0 4px 10px rgba(0, 0, 0, 0.7),
+		0 0 6px rgba(225, 190, 70, 0.7);
+}
