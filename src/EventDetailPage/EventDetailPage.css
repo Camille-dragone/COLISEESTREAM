@@ -1,0 +1,213 @@
+.event-detail-page {
+  max-width: 1000px;
+  margin: 9rem auto 3rem;
+  padding: 2.5rem 2rem;
+  font-family: "Cinzel", serif;
+}
+
+.event-detail-page header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.event-detail-page h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #c9a223;
+  text-shadow: 0 0 10px rgba(225, 190, 70, 0.5);
+}
+
+.event-detail-page h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1.2rem;
+}
+
+.event-description {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #383838;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+.event-detail-image {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto 0;
+  display: block;
+}
+
+.event-section {
+  margin-top: 2.3rem;
+  padding-top: 1.7rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.event-section h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  color: #af8b14;
+}
+
+.event-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+.event-section li {
+  font-size: 0.96rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  color: black;
+}
+
+.event-section.upcoming {
+  padding: 1.7rem 1.2rem 1.8rem;
+  border-radius: 14px;
+  border: 1px solid rgba(225, 190, 70, 0.35);
+}
+
+.event-section.results {
+  padding: 1.7rem 1.2rem 1.8rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.event-section.results p,
+.event-section.upcoming p {
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.ticket-button {
+  margin-top: 0.8rem;
+  padding: 0.7rem 1.7rem;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: radial-gradient(
+    circle at 30% 0,
+    #ffeaa7 0,
+    #e1be46 40%,
+    #7b5a12 100%
+  );
+  color: #21170a;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), 0 0 10px rgba(225, 190, 70, 0.9);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+    filter 0.12s ease-out;
+}
+
+.ticket-button:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.9), 0 0 14px rgba(255, 230, 140, 1);
+  filter: brightness(1.05);
+}
+
+.ticket-button:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), 0 0 6px rgba(225, 190, 70, 0.7);
+}
+
+@media (max-width: 768px) {
+  .event-detail-page {
+    margin: 2rem 1rem 2.5rem;
+    padding: 1.5rem 1.2rem;
+  }
+
+  .event-detail-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .event-detail-page h2 {
+    font-size: 1.1rem;
+  }
+
+  .event-section {
+    margin-top: 1.8rem;
+    padding-top: 1.2rem;
+  }
+
+  .event-section.upcoming,
+  .event-section.results {
+    padding: 1.3rem 1rem 1.4rem;
+  }
+}
+
+.team-grid,
+.gladiator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.team-card,
+.gladiator-card {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.team-card-header h4,
+.gladiator-card-header h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.1rem;
+  color: #7e0a0a;
+}
+
+.team-city,
+.gladiator-nickname {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  color: #000000;
+}
+
+.gladiator-nickname {
+  color: black;
+}
+
+.team-slogan,
+.gladiator-motto {
+  margin-top: 0.6rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #353535;
+}
+
+.team-horses {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.team-members,
+.gladiator-infos {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+}
+
+.team-members li,
+.gladiator-infos li {
+  margin-bottom: 0.25rem;
+}
