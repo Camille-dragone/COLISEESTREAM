@@ -6,9 +6,10 @@ import "./index.css";
 import App from "./App";
 import HomePage from "./HomePage/HomePage";
 import EventPage from "./EventPage/EventPage";
-import EventDetailPage from "./EventDetailPage/EventDetailPage.tsx";
 import LiveStream from "./LiveStream/LiveStream.tsx";
 import Replay from "./Replay/Replay.tsx";
+import EventDetailPage from "./EventDetailPage/EventDetailPage";
+import TicketPage from "./TicketPage/TicketPage";
 
 const router = createBrowserRouter([
 	{
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "/stream/replay",
         element: <Replay/>,
       },
+			{
+				path: "/events/:eventId/tickets",
+				element: <TicketPage />,
+			},
 		],
 	},
 ]);

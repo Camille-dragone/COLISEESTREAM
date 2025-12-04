@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { coliseumEvents, type ColiseumEvent } from "../data/ColiseumEvents";
 import {
 	gladiators as allGladiators,
@@ -137,9 +137,12 @@ interface UpcomingProps {
 }
 
 const UpcomingEventDetail: React.FC<UpcomingProps> = ({
+	eventId,
 	minPrice,
 	maxPrice,
 }) => {
+	const navigate = useNavigate();
+
 	return (
 		<section className="event-section upcoming">
 			<h3>Billetterie</h3>
@@ -149,7 +152,11 @@ const UpcomingEventDetail: React.FC<UpcomingProps> = ({
 					<strong>{maxPrice}</strong> deniers.
 				</p>
 			)}
-			<button type="button" className="ticket-button">
+			<button
+				type="button"
+				className="ticket-button"
+				onClick={() => navigate(`/events/${eventId}/tickets`)}
+			>
 				Réserver des places
 			</button>
 		</section>
