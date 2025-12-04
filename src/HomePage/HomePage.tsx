@@ -1,3 +1,4 @@
+import Counter from "../components/Counter/counter";
 import Hero from "../components/Header/Hero/Hero";
 import SocialProof from "../components/SocialProof/SocialProof";
 import Timeline from "../components/Timeline/timeline";
@@ -7,8 +8,9 @@ function HomePage() {
 	return (
 		<div>
 			<Hero />
-			<SocialProof />
+			<Counter />
 			<Timeline />
+			<SocialProof />
 		</div>
 	);
 }

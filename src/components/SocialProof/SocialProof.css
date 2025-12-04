@@ -1,10 +1,14 @@
 .social-proof {
-	padding: 80px 20px;
+	padding: 60px 20px;
 	position: relative;
 	overflow: hidden;
+	background-image: url("../../assets/socialproof/forumromain.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.social-proof::before {
+/* .social-proof::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -23,7 +27,7 @@
 			transparent 50%
 		);
 	pointer-events: none;
-}
+} */
 
 .social-proof-container {
 	max-width: 1200px;
@@ -34,16 +38,17 @@
 
 .social-proof-header {
 	text-align: center;
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 }
 
 .social-proof-header p {
 	font-family: cinzel, serif;
-	font-size: 42px;
+	font-size: 70px;
 	font-weight: 700;
-	color: #791515;
+	color: #ffffff;
 	margin: 0 0 12px 0;
 	letter-spacing: -0.5px;
+	text-shadow: 3px 3px 0px #000;
 }
 
 .testimonials-grid {
@@ -56,7 +61,7 @@
 	background: white;
 	padding: 32px;
 	border-radius: 12px;
-	border-left: 4px solid #791515;
+	border-left: 4px solid #d4aa08;
 	box-shadow: 0 2px 12px rgba(121, 21, 21, 0.08);
 	transition: all 0.3s ease;
 	display: flex;
@@ -88,7 +93,7 @@
 }
 
 .testimonial-text {
-	font-size: 15px;
+	font-size: 20px;
 	line-height: 1.7;
 	color: #333;
 	margin: 0;
@@ -97,14 +102,14 @@
 }
 
 .testimonial-hashtag {
-	font-size: 13px;
+	font-size: 15px;
 	color: #555;
 	font-weight: 500;
 	margin-top: -8px;
 }
 
 .testimonial-date {
-	font-size: 12px;
+	font-size: 15px;
 	color: #999;
 	font-weight: 400;
 	margin: 0;
@@ -122,18 +127,18 @@
 .author-name {
 	font-weight: 600;
 	color: #791515;
-	font-size: 14px;
+	font-size: 18px;
 	align-content: center;
 }
 
 .author-role {
-	font-size: 12px;
+	font-size: 15px;
 	color: #999;
 	font-weight: 400;
 }
 
 .author-clients {
-	font-size: 12px;
+	font-size: 15px;
 	color: #999;
 	font-weight: 400;
 }
@@ -150,7 +155,7 @@
 	display: block;
 	padding: 0.7rem 1.7rem;
 	margin-top: 40px;
-	margin-right: 20px;
+	margin-right: 130px;
 	border-radius: 999px;
 	border: none;
 	outline: none;

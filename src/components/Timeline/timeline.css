@@ -19,8 +19,8 @@
 .timeline-line {
 	position: absolute;
 	top: 40px;
-	left: 5%;
-	right: 5%;
+	left: 20%;
+	right: 20%;
 	height: 8px;
 	background-color: #791515;
 	z-index: 0;
@@ -81,7 +81,12 @@
 
 .timeline-description {
 	margin-top: 30px;
-	background-color: #d4aa08;
+	background: radial-gradient(
+		circle at 30% 0,
+		#ffeaa7 0,
+		#e1be46 40%,
+		#7b5a12 100%
+	);
 	padding: 16px 20px;
 	border-radius: 8px;
 	text-align: center;

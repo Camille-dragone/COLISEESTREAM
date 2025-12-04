@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import "./timeline.css";
 
 function Timeline() {
@@ -30,7 +29,7 @@ function Timeline() {
 
 	return (
 		<div className="timeline-header">
-			<h2>HISTOIRE DU COLISEE</h2>
+			<h2></h2>
 			<div className="timeline-container">
 				<div className="timeline-line"></div>
 				<div className="timeline-points">

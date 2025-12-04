@@ -55,7 +55,7 @@ function SocialProof() {
 										<img src={testimonial.icon} alt={testimonial.author} />
 									)}
 								</div>
-								<div author-info>
+								<div className="author-info">
 									<div className="author-name">{testimonial.author}</div>
 									<div className="author-role">{testimonial.role}</div>
 									<div className="author-clients">{testimonial.clients}</div>
