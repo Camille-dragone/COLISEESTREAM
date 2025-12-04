@@ -13,7 +13,7 @@ function Hero() {
         </div>
 
         <div className="hero-images">
-          <img src={HeroImage} alt="Colisée" className="hero-img" />
+          <img src={HeroImage} className="hero-img colisee-parallax" />
           <img src={Romain1} alt="Petit héros gauche" className="hero-img-small left" />
           <img src={Romain2} alt="Petit héros droite" className="hero-img-small right" />
         </div>
