@@ -11,7 +11,7 @@ function Header() {
           className="brand-hdr"
           aria-label="Aller à l’accueil"
         >
-        <img src={logo} alt="Accueil" className="brand-logo" />
+          <img src={logo} alt="Accueil" className="brand-logo" />
         </NavLink>
 
         <nav className="nav-hdr" aria-label="Évènements">
@@ -22,12 +22,31 @@ function Header() {
           >
             Évènements
           </NavLink>
-          <NavLink
-            to="/stream"
-            className={({ isActive }) => (isActive ? "active" : undefined)}
-          >
-            Streaming
-          </NavLink>
+
+          {/* Menu déroulant Streaming */}
+          <div className="dropdown">
+            <NavLink
+              to="/stream"
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
+              Streaming
+            </NavLink>
+            <div className="dropdown-content">
+              <NavLink
+                to="/stream/live"
+                className={({ isActive }) => (isActive ? "active" : undefined)}
+              >
+                Live
+              </NavLink>
+              <NavLink
+                to="/stream/replay"
+                className={({ isActive }) => (isActive ? "active" : undefined)}
+              >
+                Replay
+              </NavLink>
+            </div>
+          </div>
+
           <NavLink
             to="/store"
             className={({ isActive }) => (isActive ? "active" : undefined)}
