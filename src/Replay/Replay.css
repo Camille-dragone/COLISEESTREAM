@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap");
 
+<<<<<<< HEAD
 body {
   font-family: "Cinzel", serif;
   color: black;
+=======
+.estetic{
+  font-family: 'Cinzel', serif;
+  color:black;
+>>>>>>> 28d44627a1ae641773f30937539da6058088589c
   margin: 0;
   padding: 0;
   text-align: center;

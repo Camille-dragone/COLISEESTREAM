@@ -8,7 +8,7 @@ interface EventComponentProps {
 
 const EventComponent: React.FC<EventComponentProps> = ({ imgSrc, eventId }) => {
 	return (
-		<Link to={`/events/${eventId}`} className="event-card">
+		<Link to={`/events/${eventId}`} className="eventImgCont">
 			<img
 				src={imgSrc}
 				alt="Affiche de l'évènement"
