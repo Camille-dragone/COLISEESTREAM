@@ -5,6 +5,7 @@ import "./Replay.css";
 
 const Replay: React.FC = () => {
   return (
+    <div className="estetic">
     <div className="replay-page">
       <h1>Galerie</h1>
 
@@ -14,6 +15,7 @@ const Replay: React.FC = () => {
           <VideoCarousel images={category.images} />
         </div>
       ))}
+    </div>
     </div>
   );
 };
