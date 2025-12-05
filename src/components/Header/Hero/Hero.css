@@ -28,6 +28,7 @@
 }
 
 .hero-content h1 {
+<<<<<<< HEAD
   font-size: 5rem;
   font-weight: 700;
   position: relative;
@@ -35,6 +36,15 @@
   transform: translateX(100vw);
   z-index: 20;
   animation: slide-in-full 4s ease-out forwards;
+=======
+    font-size: 7rem;              
+    font-weight: 700;
+    position: relative;           
+    opacity: 0;                   
+    transform: translateX(100vw); 
+    z-index: 20;                  
+    animation: slide-in-full 4s ease-out forwards; 
+>>>>>>> 795f9288f2d6840e559512a2c4539fcb85143f91
 }
 
 @keyframes slide-in-full {
