@@ -1,0 +1,79 @@
+.counters-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	gap: 60px;
+	padding-top: 30px;
+	overflow: hidden; /* pour cacher le débordement du blur */
+	z-index: 0;
+}
+
+.counters-wrapper::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../../assets/chiffresclés/CourseCharsHome.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(4px); /* <<< flou */
+	z-index: -1; /* passe derrière ton contenu */
+}
+
+.counter-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 16px;
+	min-width: 200px;
+	transition: all 0.3s ease;
+	padding-left: 250px;
+	padding-right: 30px;
+	background-color: rgba(0, 0, 0, 0.08);
+	width: fit-content;
+}
+
+.counter-container:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.counter-icon {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	display: block;
+	margin-bottom: 8px;
+	filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+	-webkit-filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5)); /* safari */
+}
+
+/* .counter-icon {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	display: block;
+	margin-bottom: 8px;
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+} */
+
+.counter {
+	font-size: 70px;
+	font-weight: 700;
+	color: #ffffff;
+	text-shadow: 2.5px 2.5px 0px #000;
+	text-align: center;
+}
+
+.counter-container span {
+	font-size: 30px;
+	color: #ffffff;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 1px 1px 0px #000;
+}

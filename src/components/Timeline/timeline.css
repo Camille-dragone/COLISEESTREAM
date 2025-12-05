@@ -1,0 +1,130 @@
+.timeline-header {
+	font-family: cinzel, serif;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	padding-top: 40px;
+	color: #791515;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.timeline-header h2 {
+	display: contents;
+	font-size: 40px;
+	color: #333;
+	width: 400px;
+	align-content: center;
+}
+
+.timeline-container {
+	position: relative;
+	padding: 40px 20px 100px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.timeline-line {
+	position: absolute;
+	top: 40px;
+	left: 20%;
+	right: 20%;
+	height: 8px;
+	background-color: #791515;
+	z-index: 0;
+}
+
+.timeline-points {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	max-width: 1000px;
+	position: relative;
+	z-index: 1;
+	gap: 20px;
+	padding: 0 20px;
+}
+
+.timeline-point-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	position: relative;
+	padding-top: 20px;
+}
+
+.timeline-point {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #791515;
+	cursor: pointer;
+	transition: all 1s ease;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	flex-shrink: 0;
+	margin-top: -30px;
+}
+
+.timeline-point:hover {
+	background-color: #791515;
+	transform: scale(1.2);
+	box-shadow: 0 0 0 8px rgba(121, 21, 21, 0.1);
+	/* border-color: #791515; */
+}
+
+.timeline-point.active {
+	background-color: #791515;
+	/* border-color: #791515; */
+	width: 30px;
+	height: 30px;
+	margin-top: -30px;
+	box-shadow: 0 0 0 10px rgba(121, 21, 21, 0.1);
+}
+
+.timeline-description {
+	margin-top: 30px;
+	background: radial-gradient(
+		circle at 30% 0,
+		#ffeaa7 0,
+		#e1be46 40%,
+		#7b5a12 100%
+	);
+	padding: 16px 20px;
+	border-radius: 8px;
+	text-align: center;
+	animation: slideUp 0.3s ease;
+	min-width: 150px;
+	min-height: 170px;
+	display: grid;
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.timeline-year {
+	font-weight: 700;
+	font-size: 30px;
+	color: #791515;
+	margin-bottom: 8px;
+}
+
+.timeline-event {
+	font-size: 20px;
+	color: #333;
+	line-height: 1.5;
+}
