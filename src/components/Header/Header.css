@@ -71,7 +71,7 @@
 }
 
 .nav-hdr a {
-	color: #791515;
+	color: black;
 	text-decoration: none;
 	font-weight: 500;
 	position: relative;
@@ -126,7 +126,7 @@
 	padding: 10px 15px;
 	display: block;
 	text-decoration: none;
-	color: #791515;
+	color:black;
 }
 
 .dropdown-content a:hover {
