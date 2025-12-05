@@ -1,0 +1,174 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.bandeau-faq {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.coliseum-container {
+	/* background: linear-gradient(135deg, #f4e4c1 0%, #e8d5b7 100%); */
+	min-height: 100vh;
+	color: #3d2817;
+}
+
+.header-IP {
+	font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+	background: linear-gradient(135deg, #8b0000 0%, #5c0000 100%);
+	color: #d4aa08;
+	font-size: 3rem;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 120px;
+	padding-bottom: 20px;
+
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.info-section {
+	background: #fff;
+	border-radius: 8px;
+	padding: 2rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.info-section h2 {
+	font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+	color: #8b0000;
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+	padding-left: 60px;
+	border-bottom: 2px solid #daa520;
+	padding-bottom: 0.5rem;
+}
+
+.info-card {
+	background: #fefdfb;
+	padding: 1.5rem;
+	border-left: 4px solid #daa520;
+}
+
+.schedule-item,
+.access-item {
+	border-bottom: 1px solid #e8d5b7;
+}
+
+.schedule-item:last-of-type,
+.access-item:last-of-type {
+	border-bottom: none;
+	margin-bottom: 1rem;
+}
+
+.schedule-item h3,
+.access-item h3 {
+	font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+	color: #5c0000;
+	font-size: 1.3rem;
+	margin-bottom: 0.5rem;
+}
+
+.schedule-item p,
+.access-item p {
+	line-height: 1.6;
+	font-size: 1rem;
+}
+
+.schedule-item strong {
+	color: #8b0000;
+	font-weight: 600;
+}
+
+.detail {
+	font-style: italic;
+	color: #666;
+	margin-top: 0.3rem;
+}
+
+.note,
+.landmark {
+	background: #fff3cd;
+	border-left: 4px solid #ff8c00;
+	padding: 1rem;
+	margin-top: 1rem;
+	font-weight: 500;
+	color: #856404;
+}
+
+.tip-category {
+	margin-bottom: 2rem;
+}
+
+.tip-category h3 {
+	font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+	color: #8b0000;
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.tip-category ul {
+	list-style-position: inside;
+	padding-left: 1rem;
+}
+
+.tip-category li {
+	line-height: 1.8;
+	margin-bottom: 0.5rem;
+	color: #3d2817;
+}
+
+.tip-category li::marker {
+	color: #daa520;
+}
+
+.capacity {
+	background: linear-gradient(135deg, #5c0000 0%, #8b0000 100%);
+	color: #f4e4c1;
+	text-align: center;
+	border: none;
+}
+
+.capacity-info h3 {
+	font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+	color: #daa520;
+}
+
+.capacity-info p {
+	font-size: 1.2rem;
+}
+
+.footer {
+	background: #3d2817;
+	color: #f4e4c1;
+	text-align: center;
+	padding: 2rem;
+	margin-top: 3rem;
+	border-top: 4px solid #daa520;
+}
+
+.footer p {
+	font-size: 1.1rem;
+	letter-spacing: 0.15em;
+	margin-bottom: 0.5rem;
+}
+
+.footer-note {
+	font-style: italic;
+	opacity: 0.8;
+	font-size: 0.9rem;
+}

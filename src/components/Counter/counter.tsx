@@ -44,7 +44,7 @@ function Counter() {
 					label={counter.label}
 				/>
 			))}
-			<button type="button" className="see-more-button">
+			<button type="button" className="see-more-event">
 				Voir tous les événements
 			</button>
 		</div>

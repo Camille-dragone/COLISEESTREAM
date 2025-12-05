@@ -1,4 +1,3 @@
-import React from "react";
 import "./gotostream.css";
 import ZigotoImage from "../../assets/zigoto.png";
 
@@ -15,6 +14,9 @@ function Gotostream() {
 				</p>
 				<button type="button" className="gotostream-button">
 					Accéder au replay
+				</button>
+				<button type="button" className="gotostream-live-button">
+					Regarder le direct
 				</button>
 			</div>
 		</div>
