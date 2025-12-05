@@ -10,6 +10,7 @@ import LiveStream from "./LiveStream/LiveStream.tsx";
 import Replay from "./Replay/Replay.tsx";
 import EventDetailPage from "./EventDetailPage/EventDetailPage";
 import TicketPage from "./TicketPage/TicketPage";
+import Store from "./Store/Store.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
 			{
 				path: "/events/:eventId/tickets",
 				element: <TicketPage />,
+			},
+						{
+				path: "/store",
+				element: <Store/>,
 			},
 		],
 	},
