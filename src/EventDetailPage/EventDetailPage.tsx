@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router";
 import { coliseumEvents, type ColiseumEvent } from "../data/ColiseumEvents";
 import {
 	gladiators as allGladiators,
