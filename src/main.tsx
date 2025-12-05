@@ -11,6 +11,7 @@ import Replay from "./Replay/Replay.tsx";
 import EventDetailPage from "./EventDetailPage/EventDetailPage";
 import TicketPage from "./TicketPage/TicketPage";
 import FaqPage from "./FAQ/FaqPage.tsx";
+import Store from "./Store/Store.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -43,6 +44,9 @@ const router = createBrowserRouter([
 			{
 				path: "/Infos",
 				element: <FaqPage />,
+						{
+				path: "/store",
+				element: <Store/>,
 			},
 		],
 	},

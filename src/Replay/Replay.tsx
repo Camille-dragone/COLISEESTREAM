@@ -7,7 +7,7 @@ const Replay: React.FC = () => {
   return (
     <div className="estetic">
     <div className="replay-page">
-      <h1>Galerie</h1>
+     {/*} <h1>Galerie</h1>*/}
 
       {categories.map((category) => (
         <div key={category.id} className="category-section">

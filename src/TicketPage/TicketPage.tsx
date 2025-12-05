@@ -14,6 +14,10 @@ const TicketPage: React.FC = () => {
 	const [selectedZone, setSelectedZone] = useState<ZoneKey>("ima");
 	const [quantity, setQuantity] = useState<number>(1);
 
+	// Nouveaux états pour la confirmation
+	const [isConfirmed, setIsConfirmed] = useState(false);
+	const [orderNumber, setOrderNumber] = useState<string | null>(null);
+
 	if (!event) {
 		return <main className="ticket-page">Évènement introuvable.</main>;
 	}
@@ -43,6 +47,14 @@ const TicketPage: React.FC = () => {
 			default:
 				return "";
 		}
+	};
+
+	// Fonction appelée au clic sur "Valider ma réservation"
+	const handleValidate = () => {
+		// Génère un numéro de commande pseudo aléatoire (6 chiffres)
+		const randomNumber = Math.floor(100000 + Math.random() * 900000);
+		setOrderNumber(randomNumber.toString());
+		setIsConfirmed(true);
 	};
 
 	return (
@@ -175,9 +187,27 @@ const TicketPage: React.FC = () => {
 							Total : <strong>{total} deniers</strong>
 						</p>
 
-						<button className="ticket-pay-button" type="button">
+						<button
+							className="ticket-pay-button"
+							type="button"
+							onClick={handleValidate}
+						>
 							Valider ma réservation
 						</button>
+
+						{/* Bloc de confirmation après clic */}
+						{isConfirmed && orderNumber && (
+							<div className="ticket-confirmation">
+								<p>✅ Merci pour votre commande !</p>
+								<p>
+									Numéro de commande : <strong>{orderNumber}</strong>
+								</p>
+								<p>
+									Montant à payer au guichet du Colisée :{" "}
+									<strong>{total} deniers</strong>
+								</p>
+							</div>
+						)}
 					</section>
 				</div>
 			</section>

@@ -1,172 +1,158 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap");
 
 .hero-wrapper {
-	width: 100vw;
-	border-bottom: 1px solid #791515;
-	overflow: hidden;
+    width: 100vw;
+    border-bottom: 1px solid #791515;
+    overflow: hidden;
 }
 
 .hero-section {
-	width: 100%;
-	min-height: 600px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	padding: 0 4rem;
-	box-sizing: border-box;
-	position: relative;
-	font-family: "Cinzel", serif;
-	color: #791515;
-	background-color: #efebe8;
+    width: 100%;
+    min-height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4rem; 
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Cinzel", serif;
+    color: black;
+    background-color: #efebe8;
 }
 
 .hero-content {
-	max-width: 450px;
-	text-align: left;
-	color: rgb(64, 42, 42);
-	z-index: 4;
+    max-width: 450px;
+    text-align: left;
+    color: rgb(64, 42, 42);
+    z-index: 4;
+}
+
+.hero-content h1 {
+    font-size: 7rem;              
+    font-weight: 700;
+    position: relative;           
+    opacity: 0;                   
+    transform: translateX(100vw); 
+    z-index: 20;                  
+    animation: slide-in-full 4s ease-out forwards; 
+}
+
+@keyframes slide-in-full {
+    0% {
+        opacity: 0;
+        transform: translateX(100vw); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);     
+    }
 }
 
 .hero-images {
-	position: relative;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	width: auto;
-	perspective: 1200px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: auto;
+    perspective: 1200px;
 }
 
 .hero-img {
-	width: 500px;
-	height: auto;
-	object-fit: cover;
-	border-radius: 8px;
-	position: relative;
-	z-index: 1;
-	opacity: 0;
-	display: block;
-	background: transparent;
-
-	animation: colisee-dynamic 3s ease-out forwards;
+    width: 600px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    display: block;
+    background: transparent;
+    animation: colisee-dynamic 3s ease-out forwards;
 }
 
 @keyframes colisee-dynamic {
-	0% {
-		transform: scale(0.95);
-		opacity: 0;
-	}
-	50% {
-		transform: scale(1);
-		opacity: 0.7;
-	}
-	100% {
-		transform: scale(1.2);
-		opacity: 1;
-	}
+    0% { transform: scale(0.95); opacity: 0; }
+    50% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.3); opacity: 1; } 
 }
 
 .hero-img-small {
-	width: 140px;
-	height: auto;
-	object-fit: cover;
-	border-radius: 8px;
-	position: absolute;
-	bottom: -10px;
-	opacity: 0;
-	transform-style: preserve-3d;
-	display: block;
-	background: transparent;
-
-	animation: walk-dynamic 3s ease-out forwards;
+    width: 180px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 20px; 
+    opacity: 0;
+    transform-style: preserve-3d;
+    display: block;
+    background: transparent;
+    animation: walk-dynamic 3s ease-out forwards;
 }
 
 .hero-img-small::after {
-	content: "";
-	position: absolute;
-	bottom: -6px;
-	left: 50%;
-	width: 120%;
-	height: 20px;
-	background: radial-gradient(
-		ellipse at center,
-		rgba(0, 0, 0, 0.35) 0%,
-		rgba(0, 0, 0, 0) 70%
-	);
-	transform: translateX(-50%) scale(0.5);
-	opacity: 0;
-	pointer-events: none;
-	z-index: -1;
-	transition:
-		opacity 0.5s ease,
-		transform 0.5s ease;
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 120%;
+    height: 20px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(0, 0, 0, 0) 70%
+    );
+    transform: translateX(-50%) scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .hero-img-small:after {
-	opacity: 1;
-	transform: translateX(-50%) scale(1);
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
 }
 
 .hero-img-small.left {
-	left: 50px;
-	z-index: 2;
-	animation-delay: 0.4s;
+    left: 50px;
+    z-index: 2;
+    animation-delay: 0.4s;
 }
 
 .hero-img-small.right {
-	right: 50px;
-	z-index: 3;
-	animation-delay: 0.6s;
+    right: 50px;
+    z-index: 3;
+    animation-delay: 0.6s;
 }
 
 @keyframes walk-dynamic {
-	0% {
-		transform: scale(0.6) translateX(0) translateY(70px);
-		opacity: 0;
-		z-index: 1;
-	}
-	25% {
-		transform: scale(0.8) translateX(5px) translateY(45px);
-		opacity: 0.5;
-		z-index: 2;
-	}
-	50% {
-		transform: scale(1) translateX(10px) translateY(25px);
-		opacity: 0.8;
-		z-index: 3;
-	}
-	75% {
-		transform: scale(1.2) translateX(15px) translateY(5px);
-		opacity: 0.95;
-		z-index: 4;
-	}
-	100% {
-		transform: scale(1.4) translateX(20px) translateY(-10px);
-		opacity: 1;
-		z-index: 5;
-	}
+    0% { transform: scale(0.8) translateX(0) translateY(80px); opacity: 0; z-index: 1; }
+    25% { transform: scale(1) translateX(5px) translateY(50px); opacity: 0.5; z-index: 2; }
+    50% { transform: scale(1.2) translateX(10px) translateY(25px); opacity: 0.8; z-index: 3; }
+    75% { transform: scale(1.5) translateX(15px) translateY(5px); opacity: 0.95; z-index: 4; }
+    100% { transform: scale(1.8) translateX(20px) translateY(-10px); opacity: 1; z-index: 5; }
 }
 
 .hero-section::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 200px;
-	background: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0),
-		rgba(0, 0, 0, 0.05) 40%
-	);
-	z-index: 0;
-	animation: ground-fade 2s ease-out forwards;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.05) 40%
+    );
+    z-index: 0;
+    animation: ground-fade 2s ease-out forwards;
 }
 
 @keyframes ground-fade {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
+
+

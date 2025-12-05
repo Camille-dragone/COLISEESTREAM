@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&display=swap");
+
+.store-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+  padding-top: 150px; 
+  font-family: "Cinzel", serif;
+  color: #000000;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-family: "Cinzel", serif;
+  font-size: 3rem;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+.categories-bg-wrapper {
+  background-image: url('../assets/marbre2.jpg');
+  padding: 40px 24px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.categories-bg {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.categories-bg > article {
+  border: 1px solid #791515;
+  border-radius: 8px;
+  padding: 24px;
+  min-height: 450px;
+  text-align: center;
+  background: rgba(121, 21, 21, 0.2);
+}
+
+.categories-bg > article h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+  color: #000000;
+  display: block;                 
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8); 
+  padding-bottom: 6px;              
+  margin-bottom: 20px;              
+}
+
+
+.categories p {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  color: #000000;
+}
+
+.category-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.category-images img {
+  width: 90%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.price {
+  font-weight: bold;
+  color: #000000; 
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.product-button {
+  margin-top: 0.4rem;
+  padding: 0.4rem 1rem; 
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.8rem; 
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: radial-gradient(
+    circle at 30% 0,
+    #ffeaa7 0,
+    #e1be46 40%,
+    #7b5a12 100%
+  );
+  color: #21170a;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), 0 0 10px rgba(225, 190, 70, 0.9);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+    filter 0.12s ease-out;
+}
+
+.product-button:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.9), 0 0 14px rgba(255, 230, 140, 1);
+  filter: brightness(1.05);
+}
+
+.product-button:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), 0 0 6px rgba(225, 190, 70, 0.7);
+}
+
+.product {
+  border: 1px solid #791515;       
+  border-radius: 8px;              
+  padding: 12px;                   
+  background: rgba(255, 255, 255, 0.15); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product:hover {
+  transform: scale(1.05);         
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
