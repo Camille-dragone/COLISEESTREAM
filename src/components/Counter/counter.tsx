@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "./counter.css";
 import IconGladiateur from "../../assets/chiffresclés/icongladiateurchiffre.png";
@@ -44,9 +45,9 @@ function Counter() {
 					label={counter.label}
 				/>
 			))}
-			<button type="button" className="see-more-button">
+			<Link to={"/events"} type="button" className="see-more-event">
 				Voir tous les événements
-			</button>
+			</Link>
 		</div>
 	);
 }
