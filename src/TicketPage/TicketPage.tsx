@@ -49,9 +49,9 @@ const TicketPage: React.FC = () => {
 		}
 	};
 
-	// Fonction appelée au clic sur "Valider ma réservation"
+	// Fonction "Valider ma résa"
 	const handleValidate = () => {
-		// Génère un numéro de commande pseudo aléatoire (6 chiffres)
+		//  numéro de commande aléatoire
 		const randomNumber = Math.floor(100000 + Math.random() * 900000);
 		setOrderNumber(randomNumber.toString());
 		setIsConfirmed(true);
@@ -195,7 +195,6 @@ const TicketPage: React.FC = () => {
 							Valider ma réservation
 						</button>
 
-						{/* Bloc de confirmation après clic */}
 						{isConfirmed && orderNumber && (
 							<div className="ticket-confirmation">
 								<p>✅ Merci pour votre commande !</p>
