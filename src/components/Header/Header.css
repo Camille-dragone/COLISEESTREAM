@@ -73,7 +73,7 @@
 .nav-hdr a {
 	color: black;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 600;
 	position: relative;
 	padding: 0.25rem 0;
 	transition:
@@ -126,7 +126,7 @@
 	padding: 10px 15px;
 	display: block;
 	text-decoration: none;
-	color:black;
+	color: black;
 }
 
 .dropdown-content a:hover {
